@@ -56,7 +56,7 @@ function Todo({ todo, total, hidden, setInputs, setTodo }) {
   };
 
   return (
-    <div>
+    <div className="todo">
       <Modal open={open} onClose={(e) => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
           <h1>Edit Todo</h1>
@@ -71,12 +71,12 @@ function Todo({ todo, total, hidden, setInputs, setTodo }) {
       <List className="todo__list">
         <ListItem className="todo__listItem">
           <ListItemAvatar></ListItemAvatar>
-          <ListItemText primary={todos}></ListItemText>
+          <ListItemText className="todo__item" primary={todos}></ListItemText>
           <DeleteIcon
-            className="delete__button"
+            className="icon__button"
             onClick={deleteData}
           ></DeleteIcon>
-          <EditIcon className="edit__button" onClick={(e) => setOpen(true)} />
+          <EditIcon className="icon__button" onClick={(e) => setOpen(true)} />
         </ListItem>
       </List>
     </div>

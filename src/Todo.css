@@ -1,0 +1,21 @@
+.icon__button {
+  margin-left: 10px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  min-width: 30vw;
+}
+
+@media screen and (max-width: 350px) {
+  .todo {
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+
+  ..MuiListItem-root {
+    display: block;
+  }
+}
